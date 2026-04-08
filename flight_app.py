@@ -5,9 +5,9 @@ from datetime import datetime, timedelta
 import airportsdata
 import numpy as np
 
-# --- 1. 配置区 ---
-API_TOKEN = "40f5ea125df0445d5d345eef153d3d67"
-RAPIDAPI_KEY = "cmnq45lgb0009k00454dby6oa" 
+# 从 Streamlit 的 Secrets 中读取 Key
+API_TOKEN = st.secrets["API_TOKEN"]
+RAPIDAPI_KEY = st.secrets["RAPIDAPI_KEY"]
 
 # --- 2. 数据获取函数 ---
 @st.cache_resource
